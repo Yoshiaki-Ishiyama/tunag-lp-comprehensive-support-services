@@ -1301,13 +1301,32 @@ table {
 }
 
 .p-experts__role {
-  font-family: var(--font-en);
   font-size: var(--text-xs);
   font-weight: 600;
-  letter-spacing: 0.1em;
+  line-height: 1.5;
   color: var(--color-brand-aqua);
-  text-transform: uppercase;
   margin-bottom: var(--space-2);
+}
+
+.p-experts__themes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.p-experts__themes li {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-primary);
+  background: rgba(69, 120, 216, 0.08);
+  border: 1px solid rgba(69, 120, 216, 0.2);
+  border-radius: 999px;
+  padding: 4px 10px;
 }
 
 .p-experts__bio {
