@@ -280,32 +280,21 @@ table {
 .c-brand {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-1);
-  font-weight: 700;
-  color: var(--color-primary);
-  font-family: var(--font-en);
-  letter-spacing: 0.04em;
-  font-size: 1.25rem;
+  transition: opacity 0.2s ease;
 }
 
 .c-brand:hover {
-  color: var(--color-primary-hover);
+  opacity: 0.8;
 }
 
-.c-brand__mark {
-  width: 28px;
+.c-brand__logo {
   height: 28px;
-  border-radius: 6px;
-  background: var(--gradient-brand);
-  box-shadow: 0 4px 10px rgba(69, 120, 216, 0.3);
+  width: auto;
+  display: block;
 }
 
-.c-brand--on-dark {
-  color: var(--color-text-on-brand);
-}
-
-.c-brand--on-dark:hover {
-  color: var(--color-brand-aqua);
+.c-brand--on-dark .c-brand__logo {
+  filter: brightness(0) invert(1);
 }
 
 /* ===== Nav ===== */
