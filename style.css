@@ -561,111 +561,13 @@ table {
   justify-content: center;
 }
 
-.p-hero__mock {
+.p-hero__mock-image {
   width: 100%;
   max-width: 520px;
-  background: #ffffff;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 20px 60px rgba(10, 36, 86, 0.35), 0 6px 16px rgba(69, 120, 216, 0.22);
-  overflow: hidden;
-}
-
-.p-hero__mock-head {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1rem;
-  background: var(--color-bg-soft);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.p-hero__mock-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--color-border);
-}
-
-.p-hero__mock-dot:nth-child(1) { background: #ff6b6b; }
-.p-hero__mock-dot:nth-child(2) { background: #ffd93d; }
-.p-hero__mock-dot:nth-child(3) { background: #6bcf7f; }
-
-.p-hero__mock-title {
-  margin-left: auto;
-  font-family: var(--font-en);
-  font-size: var(--text-xs);
-  color: var(--color-text-mute);
-  letter-spacing: 0.05em;
-}
-
-.p-hero__mock-body {
-  padding: 1.5rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  color: var(--color-text);
-}
-
-.p-hero__mock-metric {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  padding: 1rem;
-  background: var(--color-bg-soft);
-  border-radius: var(--radius-md);
-}
-
-.p-hero__mock-label {
-  font-size: var(--text-sm);
-  color: var(--color-text-mute);
-  font-weight: 500;
-}
-
-.p-hero__mock-value {
-  font-family: var(--font-en);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  line-height: 1;
-}
-
-.p-hero__mock-value span {
-  font-size: 1rem;
-  margin-left: 2px;
-  color: var(--color-brand-blue);
-}
-
-.p-hero__mock-chart {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 6px;
-  height: 120px;
-  padding: 0.5rem 0;
-}
-
-.p-hero__mock-chart span {
-  flex: 1;
-  height: var(--h, 50%);
-  background: var(--gradient-brand);
-  border-radius: 4px 4px 0 0;
-  opacity: 0.9;
-}
-
-.p-hero__mock-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.375rem;
-}
-
-.p-hero__mock-pills span {
-  padding: 0.25rem 0.625rem;
-  font-size: var(--text-xs);
-  border-radius: 999px;
-  background: var(--color-bg-soft);
-  color: var(--color-primary);
-  font-weight: 500;
-  border: 1px solid var(--color-border);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 24px 40px rgba(10, 36, 86, 0.25));
 }
 
 /* ===== Logos ===== */
@@ -1626,6 +1528,10 @@ table {
   display: initial;
 }
 
+.u-pc-only {
+  display: none;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -1808,8 +1714,8 @@ table {
     padding-bottom: var(--space-8);
   }
 
-  .p-hero__mock {
-    max-width: 420px;
+  .p-hero__mock-image {
+    max-width: 460px;
   }
 
   .p-hero__copy {
@@ -1860,6 +1766,10 @@ table {
 
   .p-strengths__summary-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .u-pc-only {
+    display: inline;
   }
 }
 
