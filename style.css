@@ -197,8 +197,21 @@ table {
   gap: var(--space-3);
 }
 
-.l-header__cta {
+.l-header__ctas {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
   flex-shrink: 0;
+}
+
+.l-header__cta-sub {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .l-header__cta-sub {
+    display: inline-flex;
+  }
 }
 
 /* ===== Footer ===== */
