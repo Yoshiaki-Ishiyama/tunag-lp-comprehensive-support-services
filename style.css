@@ -529,6 +529,13 @@ table {
   letter-spacing: 0.02em;
 }
 
+.p-hero__title-sub {
+  display: inline-block;
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
 .p-hero__subtitle {
   font-size: var(--text-base);
   line-height: 1.9;
@@ -1812,6 +1819,11 @@ table {
   .p-hero__title {
     font-size: var(--text-hero);
     line-height: 1.25;
+  }
+
+  .p-hero__title-sub {
+    font-size: 0.65em;
+    white-space: nowrap;
   }
 
   .p-hero__actions {
