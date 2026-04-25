@@ -910,14 +910,14 @@ table { border-collapse: collapse; width: 100%; }
   line-height: 1.9;
 }
 
-/* ---------- p-platform ---------- */
-.p-platform__list {
+/* ---------- p-about ---------- */
+.p-about__list {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-3);
 }
-.p-platform__item {
-  background: var(--color-bg-soft);
+.p-about__item {
+  background: #ffffff;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-4) var(--space-3);
@@ -926,13 +926,12 @@ table { border-collapse: collapse; width: 100%; }
   align-items: flex-start;
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
-.p-platform__item:hover {
+.p-about__item:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-card);
   border-color: transparent;
-  background: #ffffff;
 }
-.p-platform__icon {
+.p-about__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -945,11 +944,11 @@ table { border-collapse: collapse; width: 100%; }
   flex-shrink: 0;
   box-shadow: 0 6px 18px rgba(69, 120, 216, 0.22);
 }
-.p-platform__icon svg {
+.p-about__icon svg {
   width: 34px;
   height: 34px;
 }
-.p-platform__item-title {
+.p-about__item-title {
   font-family: var(--font-jp);
   font-size: var(--text-lg);
   font-weight: 700;
@@ -959,10 +958,45 @@ table { border-collapse: collapse; width: 100%; }
   letter-spacing: 0.02em;
   font-feature-settings: "palt" 1;
 }
-.p-platform__item-text {
+.p-about__item-text {
   font-size: var(--text-sm);
   color: var(--color-text-mute);
   line-height: 1.9;
+}
+
+/* About → Issues へのブリッジコピー */
+.p-about__bridge {
+  margin-top: var(--space-8);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+.p-about__bridge-text {
+  font-size: var(--text-base);
+  color: var(--color-text-mute);
+  line-height: 1.9;
+  max-width: 640px;
+}
+.p-about__bridge-arrow {
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, transparent, var(--color-brand-blue));
+  position: relative;
+}
+.p-about__bridge-arrow::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--color-brand-blue);
+  border-bottom: 2px solid var(--color-brand-blue);
+  transform: translateX(-50%) rotate(45deg);
+  margin-bottom: -1px;
 }
 
 /* ---------- p-actions ---------- */
@@ -1230,8 +1264,8 @@ table { border-collapse: collapse; width: 100%; }
   /* Strengths */
   .p-strengths__list { grid-template-columns: repeat(3, 1fr); }
 
-  /* Platform */
-  .p-platform__list { grid-template-columns: repeat(3, 1fr); }
+  /* About */
+  .p-about__list { grid-template-columns: repeat(3, 1fr); }
 
   /* Actions */
   .p-actions__list { grid-template-columns: repeat(3, 1fr); }
