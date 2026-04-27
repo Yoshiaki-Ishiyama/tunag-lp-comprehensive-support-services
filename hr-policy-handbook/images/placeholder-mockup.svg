@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="TUNAG screen mockup placeholder">
+  <defs>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f8fc"/>
+      <stop offset="100%" stop-color="#eef3fa"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4578d8"/>
+      <stop offset="100%" stop-color="#2aaadd"/>
+    </linearGradient>
+  </defs>
+
+  <!-- screen background -->
+  <rect width="1600" height="1000" fill="url(#screen)"/>
+
+  <!-- top bar -->
+  <rect x="0" y="0" width="1600" height="64" fill="#ffffff"/>
+  <rect x="40" y="22" width="120" height="20" rx="4" fill="url(#brand)"/>
+  <rect x="200" y="26" width="80" height="12" rx="6" fill="#0f1b3d" opacity="0.4"/>
+  <rect x="300" y="26" width="80" height="12" rx="6" fill="#0f1b3d" opacity="0.4"/>
+  <rect x="400" y="26" width="80" height="12" rx="6" fill="#0f1b3d" opacity="0.4"/>
+  <circle cx="1540" cy="32" r="16" fill="#e1e7f0"/>
+
+  <!-- side nav -->
+  <rect x="0" y="64" width="240" height="936" fill="#ffffff"/>
+  <rect x="32" y="100" width="176" height="34" rx="8" fill="#eef3fa"/>
+  <rect x="32" y="148" width="176" height="34" rx="8" fill="#ffffff"/>
+  <rect x="32" y="196" width="176" height="34" rx="8" fill="#ffffff"/>
+  <rect x="32" y="244" width="176" height="34" rx="8" fill="#ffffff"/>
+  <rect x="32" y="292" width="176" height="34" rx="8" fill="#ffffff"/>
+  <rect x="48" y="112" width="120" height="10" rx="5" fill="#18408a"/>
+  <rect x="48" y="160" width="100" height="10" rx="5" fill="#0f1b3d" opacity="0.5"/>
+  <rect x="48" y="208" width="110" height="10" rx="5" fill="#0f1b3d" opacity="0.5"/>
+  <rect x="48" y="256" width="90" height="10" rx="5" fill="#0f1b3d" opacity="0.5"/>
+  <rect x="48" y="304" width="120" height="10" rx="5" fill="#0f1b3d" opacity="0.5"/>
+
+  <!-- main page header -->
+  <rect x="280" y="100" width="220" height="14" rx="7" fill="#0f1b3d" opacity="0.6"/>
+  <rect x="280" y="124" width="540" height="22" rx="6" fill="#0f1b3d"/>
+  <rect x="280" y="160" width="380" height="10" rx="5" fill="#0f1b3d" opacity="0.4"/>
+
+  <!-- card 1 -->
+  <rect x="280" y="220" width="400" height="320" rx="16" fill="#ffffff" stroke="#e1e7f0"/>
+  <circle cx="328" cy="268" r="22" fill="url(#brand)"/>
+  <rect x="364" y="252" width="180" height="12" rx="6" fill="#0f1b3d"/>
+  <rect x="364" y="272" width="100" height="10" rx="5" fill="#0f1b3d" opacity="0.4"/>
+  <rect x="304" y="312" width="352" height="10" rx="5" fill="#0f1b3d" opacity="0.55"/>
+  <rect x="304" y="334" width="320" height="10" rx="5" fill="#0f1b3d" opacity="0.55"/>
+  <rect x="304" y="356" width="280" height="10" rx="5" fill="#0f1b3d" opacity="0.55"/>
+  <rect x="304" y="396" width="120" height="36" rx="10" fill="url(#brand)"/>
+  <rect x="304" y="460" width="80" height="22" rx="11" fill="#eef3fa"/>
+  <rect x="396" y="460" width="80" height="22" rx="11" fill="#eef3fa"/>
+
+  <!-- card 2 -->
+  <rect x="700" y="220" width="400" height="320" rx="16" fill="#ffffff" stroke="#e1e7f0"/>
+  <circle cx="748" cy="268" r="22" fill="#2aaadd"/>
+  <rect x="784" y="252" width="180" height="12" rx="6" fill="#0f1b3d"/>
+  <rect x="784" y="272" width="100" height="10" rx="5" fill="#0f1b3d" opacity="0.4"/>
+  <rect x="724" y="312" width="352" height="10" rx="5" fill="#0f1b3d" opacity="0.55"/>
+  <rect x="724" y="334" width="280" height="10" rx="5" fill="#0f1b3d" opacity="0.55"/>
+  <rect x="724" y="356" width="320" height="10" rx="5" fill="#0f1b3d" opacity="0.55"/>
+  <rect x="724" y="396" width="120" height="36" rx="10" fill="#18408a"/>
+  <rect x="724" y="460" width="80" height="22" rx="11" fill="#eef3fa"/>
+
+  <!-- card 3 (right column) -->
+  <rect x="1120" y="220" width="380" height="320" rx="16" fill="#ffffff" stroke="#e1e7f0"/>
+  <rect x="1144" y="244" width="80" height="14" rx="7" fill="#18408a"/>
+  <rect x="1144" y="270" width="332" height="10" rx="5" fill="#0f1b3d" opacity="0.55"/>
+  <rect x="1144" y="290" width="280" height="10" rx="5" fill="#0f1b3d" opacity="0.55"/>
+  <rect x="1144" y="324" width="332" height="80" rx="8" fill="#f5f8fc"/>
+  <text x="1310" y="372" text-anchor="middle" font-family="Inter, sans-serif" font-size="36" font-weight="700" fill="url(#brand)">+12</text>
+  <rect x="1144" y="424" width="120" height="36" rx="10" fill="#eef3fa"/>
+
+  <!-- bottom row -->
+  <rect x="280" y="580" width="1220" height="200" rx="16" fill="#ffffff" stroke="#e1e7f0"/>
+  <rect x="320" y="612" width="180" height="14" rx="7" fill="#0f1b3d"/>
+  <rect x="320" y="640" width="500" height="10" rx="5" fill="#0f1b3d" opacity="0.4"/>
+  <rect x="320" y="676" width="100" height="60" rx="8" fill="#eef3fa"/>
+  <rect x="436" y="676" width="100" height="60" rx="8" fill="#eef3fa"/>
+  <rect x="552" y="676" width="100" height="60" rx="8" fill="#eef3fa"/>
+
+  <!-- caption layer -->
+  <rect x="0" y="940" width="1600" height="60" fill="#0a2456" opacity="0.05"/>
+  <text x="800" y="978" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="500" fill="#0a2456" opacity="0.5" letter-spacing="3">TUNAG SCREEN MOCKUP — PLACEHOLDER</text>
+</svg>
