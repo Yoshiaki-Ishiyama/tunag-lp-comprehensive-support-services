@@ -911,6 +911,42 @@ table { border-collapse: collapse; width: 100%; }
 }
 
 /* ---------- p-about ---------- */
+/* About TUNAG ヒーロー領域: 左テキスト / 右画面モック */
+.p-about__hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  align-items: center;
+  margin-bottom: var(--space-8);
+}
+.p-about__hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.p-about__hero-lead {
+  font-size: var(--text-base);
+  line-height: 1.95;
+  color: var(--color-text);
+  margin: 0;
+}
+.p-about__hero-visual {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow:
+    0 2px 6px rgba(15, 27, 61, 0.06),
+    0 18px 44px rgba(15, 27, 61, 0.12);
+}
+.p-about__hero-visual svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .p-about__list {
   display: grid;
   grid-template-columns: 1fr;
@@ -1265,6 +1301,11 @@ table { border-collapse: collapse; width: 100%; }
   .p-strengths__list { grid-template-columns: repeat(3, 1fr); }
 
   /* About */
+  .p-about__hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-12);
+  }
   .p-about__list { grid-template-columns: repeat(3, 1fr); }
 
   /* Actions */
