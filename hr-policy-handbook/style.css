@@ -492,14 +492,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   flex-direction: column;
   gap: var(--space-4);
 }
-.p-fv__heading-row {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: var(--space-3);
-}
 .p-fv__title {
-  font-size: clamp(1.625rem, 4.4vw, 3rem);
+  font-size: clamp(2rem, 5vw, 3.25rem);
   font-weight: 900;
   line-height: 1.32;
   color: var(--color-text);
@@ -507,18 +501,20 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   font-feature-settings: "palt" 1;
   letter-spacing: 0.02em;
   margin: 0;
-  flex: 1 1 0;
-  min-width: 0;
+}
+.p-fv__title-line {
+  display: block;
+  white-space: nowrap;
 }
 .p-fv__title-accent { color: var(--color-primary); }
 
-/* 月桂冠バッジ(画像) */
+/* 月桂冠バッジ(画像) — h1 の上に独立配置(段落落ち防止のため横並びは廃止) */
 .p-fv__badge {
   display: block;
-  width: 170px;
+  width: 160px;
   height: auto;
-  flex-shrink: 0;
-  align-self: center;
+  margin-bottom: calc(-1 * var(--space-1));
+  align-self: flex-start;
 }
 @media (max-width: 767px) {
   .p-fv__badge { width: 130px; }
