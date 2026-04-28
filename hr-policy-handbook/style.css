@@ -508,16 +508,66 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 .p-fv__title-accent { color: var(--color-primary); }
 
-/* 月桂冠バッジ(画像) — h1 の上に独立配置(段落落ち防止のため横並びは廃止) */
-.p-fv__badge {
-  display: block;
-  width: 160px;
-  height: auto;
-  margin-bottom: calc(-1 * var(--space-1));
-  align-self: flex-start;
+/* --- FV 直下の補足帯(取り組み件数) --- */
+.p-fv-note {
+  background:
+    linear-gradient(90deg, rgba(69, 120, 216, 0.07) 0%, rgba(42, 170, 221, 0.10) 100%);
+  border-block: 1px solid rgba(69, 120, 216, 0.18);
+  padding-block: var(--space-3);
+  position: relative;
 }
-@media (max-width: 767px) {
-  .p-fv__badge { width: 130px; }
+.p-fv-note__text {
+  text-align: center;
+  margin: 0;
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+}
+.p-fv-note__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  color: var(--color-brand-aqua);
+  margin-right: 4px;
+  align-self: center;
+}
+.p-fv-note__icon svg { width: 22px; height: 22px; }
+.p-fv-note__num {
+  display: inline-flex;
+  align-items: baseline;
+  font-style: normal;
+  margin: 0 4px;
+}
+.p-fv-note__num-value {
+  font-family: var(--font-en);
+  font-size: 1.7em;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  vertical-align: -0.05em;
+}
+.p-fv-note__num-unit {
+  font-family: var(--font-jp);
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-left: 2px;
+}
+@media (min-width: 768px) {
+  .p-fv-note__text { font-size: var(--text-lg); }
+  .p-fv-note__icon { width: 24px; height: 24px; }
+  .p-fv-note__icon svg { width: 24px; height: 24px; }
 }
 
 .p-fv__subtitle {
