@@ -481,7 +481,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 @media (min-width: 1024px) {
   .p-fv__inner {
-    grid-template-columns: 1.05fr 1fr;
+    grid-template-columns: 1fr 1.2fr;
     gap: var(--space-8);
   }
 }
@@ -494,12 +494,12 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 .p-fv__heading-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: var(--space-3);
 }
 .p-fv__title {
-  font-size: clamp(1.875rem, 5vw, 3.25rem);
+  font-size: clamp(1.625rem, 4.4vw, 3rem);
   font-weight: 900;
   line-height: 1.32;
   color: var(--color-text);
@@ -507,48 +507,21 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   font-feature-settings: "palt" 1;
   letter-spacing: 0.02em;
   margin: 0;
-  flex: 1 1 auto;
+  flex: 1 1 0;
   min-width: 0;
 }
 .p-fv__title-accent { color: var(--color-primary); }
 
-/* 月桂冠バッジ */
+/* 月桂冠バッジ(画像) */
 .p-fv__badge {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   width: 170px;
-  min-height: 140px;
-  padding: 0 26px;
-  background-image: url("images/fv-laurel.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  text-align: center;
+  height: auto;
   flex-shrink: 0;
+  align-self: center;
 }
-.p-fv__badge-inner {
-  font-size: var(--text-sm);
-  font-weight: 700;
-  color: var(--color-text);
-  line-height: 1.55;
-  letter-spacing: 0.02em;
-}
-.p-fv__badge-num {
-  font-family: var(--font-en);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  letter-spacing: 0.01em;
-  line-height: 1;
-  vertical-align: -0.06em;
-}
-.p-fv__badge-unit {
-  font-family: var(--font-jp);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--color-text);
+@media (max-width: 767px) {
+  .p-fv__badge { width: 130px; }
 }
 
 .p-fv__subtitle {
@@ -603,7 +576,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .p-fv__visual {
   position: relative;
   width: 100%;
-  max-width: 720px;
+  max-width: 864px;
   margin-inline: auto;
   aspect-ratio: 3 / 2;
 }
@@ -622,12 +595,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 
 @media (max-width: 767px) {
-  .p-fv__heading-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .p-fv__badge { width: 150px; min-height: 120px; }
-  .p-fv__badge-num { font-size: 1.625rem; }
   .p-fv__features { gap: 6px; }
   .p-fv__feature-icon { width: 48px; height: 48px; }
   .p-fv__feature-icon svg { width: 20px; height: 20px; }
