@@ -5,34 +5,28 @@
 
 /* ---------- 1. :root トークン ---------- */
 :root {
-  /* === Primary Navy === */
   --color-primary: #18408a;
   --color-primary-hover: #102d63;
   --color-primary-deep: #0a2456;
 
-  /* === Brand Gradient === */
   --color-brand-blue: #4578d8;
   --color-brand-aqua: #2aaadd;
   --gradient-brand: linear-gradient(90deg, #4578d8 0%, #2aaadd 100%);
 
-  /* === Text === */
   --color-text: #0f1b3d;
   --color-text-mute: #5b6478;
   --color-text-on-brand: #ffffff;
   --color-text-on-brand-mute: rgba(255, 255, 255, 0.85);
 
-  /* === Neutrals === */
   --color-bg: #ffffff;
   --color-bg-soft: #f5f8fc;
   --color-bg-cool: #eef3fa;
   --color-border: #e1e7f0;
 
-  /* === Functional === */
   --color-success: #2d9d78;
   --color-warning: #d97706;
   --color-danger: #d94545;
 
-  /* === Shadows === */
   --shadow-card:
     0 3px 10px rgba(69, 120, 216, 0.14),
     0 20px 44px rgba(42, 170, 221, 0.10);
@@ -40,11 +34,9 @@
     0 6px 16px rgba(69, 120, 216, 0.22),
     0 32px 64px rgba(42, 170, 221, 0.16);
 
-  /* === Fonts === */
   --font-jp: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
   --font-en: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 
-  /* === Type scale === */
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -54,7 +46,6 @@
   --text-3xl: 2.75rem;
   --text-hero: 3.5rem;
 
-  /* === Spacing === */
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -64,12 +55,10 @@
   --space-12: 6rem;
   --space-16: 8rem;
 
-  /* === Layout === */
   --container-max: 1120px;
   --container-narrow: 800px;
   --container-wide: 1400px;
 
-  /* === Radius === */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
@@ -269,10 +258,14 @@ button { font: inherit; cursor: pointer; }
   border-color: #ffffff;
 }
 .c-button--secondary {
-  background: var(--color-bg-cool);
+  background: #ffffff;
+  border-color: var(--color-border);
   color: var(--color-primary);
 }
-.c-button--secondary:hover { background: var(--color-border); }
+.c-button--secondary:hover {
+  background: var(--color-bg-cool);
+  border-color: var(--color-brand-blue);
+}
 .c-button--sm { padding: 0.6rem 1.1rem; font-size: var(--text-sm); }
 .c-button--lg { padding: 1.1rem 2.4rem; font-size: var(--text-lg); }
 .c-button:active { transform: translateY(1px); }
@@ -300,7 +293,7 @@ button { font: inherit; cursor: pointer; }
   font-size: var(--text-2xl);
   font-weight: 700;
   color: var(--color-primary);
-  line-height: 1.35;
+  line-height: 1.45;
   margin: 0 0 var(--space-2);
   font-kerning: normal;
   font-feature-settings: "palt" 1;
@@ -536,196 +529,64 @@ a.p-industries__card:hover .p-industries__more {
   color: var(--color-text-mute);
 }
 
-/* === Solution === */
-.p-solution__list {
-  max-width: var(--container-wide);
-  margin: 0 auto;
-  padding: 0 var(--space-3);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-12);
+/* === Specs(全従業員で使えるTUNAGの仕様 / 3列横並び・コンパクト)=== */
+.p-specs {
+  padding: var(--space-8) 0;
+  background: var(--color-bg);
 }
-.p-solution__item {
+.p-specs__grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-4);
-  align-items: center;
 }
-.p-solution__item-image img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-lg);
-  object-fit: cover;
-  background: #ffffff;
-  box-shadow: var(--shadow-card);
-}
-.p-solution__item-label {
-  font-family: var(--font-en);
-  font-weight: 600;
-  font-size: var(--text-sm);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  margin: 0 0 var(--space-2);
-}
-.p-solution__item-title {
-  font-size: var(--text-2xl);
-  font-weight: 700;
-  color: var(--color-primary);
-  line-height: 1.4;
-  margin: 0 0 var(--space-2);
-  font-kerning: normal;
-  font-feature-settings: "palt" 1;
-  letter-spacing: 0.02em;
-}
-.p-solution__item-text {
-  margin: 0;
-  font-size: var(--text-base);
-  color: var(--color-text-mute);
-  line-height: 1.85;
-}
-
-/* === Inline CTA === */
-.p-cta {
-  background: var(--gradient-brand);
-  color: var(--color-text-on-brand);
-  padding: var(--space-8) 0;
-  position: relative;
-  overflow: hidden;
-}
-.p-cta::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 70% 50%, rgba(255,255,255,0.12) 0%, transparent 70%);
-  pointer-events: none;
-}
-.p-cta__inner {
-  position: relative;
+.p-specs__item {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: var(--space-2);
+  padding: 0 var(--space-2);
 }
-.p-cta__title {
-  font-size: var(--text-xl);
-  font-weight: 700;
-  margin: 0;
-  line-height: 1.4;
-  letter-spacing: 0.02em;
-  font-feature-settings: "palt" 1;
-}
-.p-cta__body {
-  margin: 0;
-  font-size: var(--text-base);
-  color: var(--color-text-on-brand-mute);
-  line-height: 1.8;
-  max-width: 640px;
-}
-.p-cta__actions {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  margin-top: var(--space-2);
-  width: 100%;
+.p-specs__icon {
+  display: inline-flex;
   align-items: center;
-}
-.p-cta__actions .c-button { min-width: 240px; }
-
-/* === Case studies === */
-.p-cases__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-3);
-}
-.p-cases__item { display: flex; }
-.p-cases__card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background: #ffffff;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
-  overflow: hidden;
-  text-decoration: none;
-  color: var(--color-text);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-.p-cases__card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card-strong);
-}
-.p-cases__thumb {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: var(--color-bg-cool);
-  overflow: hidden;
-}
-.p-cases__thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.p-cases__badge {
-  align-self: flex-start;
-  margin: var(--space-3) var(--space-3) 0;
-  padding: 0.25rem 0.7rem;
-  border-radius: var(--radius-pill);
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   background: var(--gradient-brand);
   color: #ffffff;
-  font-size: var(--text-xs);
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  margin-bottom: var(--space-2);
+  flex-shrink: 0;
 }
-.p-cases__metric {
-  margin: var(--space-2) var(--space-3) 0;
-  display: flex;
-  align-items: baseline;
-  gap: 0.15em;
-  line-height: 1;
+.p-specs__icon svg {
+  width: 40px;
+  height: 40px;
 }
-.p-cases__metric-number {
-  font-family: var(--font-en);
-  font-weight: 700;
-  font-size: 2.75rem;
-  background: var(--gradient-brand);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  letter-spacing: -0.02em;
-}
-.p-cases__metric-unit {
-  font-family: var(--font-jp);
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--color-primary);
-}
-.p-cases__metric-caption {
-  margin: 0 var(--space-3);
-  font-size: var(--text-sm);
-  color: var(--color-text-mute);
-  font-weight: 500;
-}
-.p-cases__company {
-  margin: var(--space-2) var(--space-3) var(--space-1);
+.p-specs__title {
   font-size: var(--text-lg);
   font-weight: 700;
   color: var(--color-primary);
+  line-height: 1.55;
+  margin: 0 0 var(--space-1);
   letter-spacing: 0.02em;
+  font-feature-settings: "palt" 1;
 }
-.p-cases__summary {
-  margin: 0 var(--space-3) var(--space-3);
+.p-specs__text {
+  margin: 0;
   font-size: var(--text-sm);
   color: var(--color-text-mute);
-  line-height: 1.8;
-  flex: 1;
+  line-height: 1.85;
 }
-.p-cases__more {
+
+/* === Resources(事例 + 資料の動線)=== */
+.p-resources__actions {
   display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: center;
   justify-content: center;
-  margin-top: var(--space-6);
 }
+.p-resources__actions .c-button { min-width: 280px; }
 
 /* ---------- 6. Utilities (u-) ---------- */
 .u-sp-only { display: block; }
@@ -753,19 +614,15 @@ a.p-industries__card:hover .p-industries__more {
   /* Industries */
   .p-industries__grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
 
-  /* Solution */
-  .p-solution__item-title { font-size: var(--text-3xl); }
+  /* Specs — 3列横並び */
+  .p-specs { padding: var(--space-12) 0; }
+  .p-specs__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
 
-  /* Cases */
-  .p-cases__grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
-  .p-cases__metric-number { font-size: 3.25rem; }
-  .p-cases__metric-unit { font-size: 1.4rem; }
-
-  /* CTA */
-  .p-cta { padding: var(--space-12) 0; }
-  .p-cta__inner { gap: var(--space-3); }
-  .p-cta__title { font-size: var(--text-2xl); }
-  .p-cta__actions { flex-direction: row; justify-content: center; }
+  /* Resources — ボタン横並び */
+  .p-resources__actions { flex-direction: row; }
 
   /* Footer */
   .l-footer__inner {
@@ -799,28 +656,10 @@ a.p-industries__card:hover .p-industries__more {
   .p-industries__icon { width: 64px; height: 64px; }
   .p-industries__icon img { width: 36px; height: 36px; }
 
-  /* Solution — 2カラム 3fr:2fr */
-  .p-solution__item {
-    grid-template-columns: 3fr 2fr;
-    gap: var(--space-8);
-  }
-  .p-solution__item--reverse {
-    grid-template-columns: 2fr 3fr;
-  }
-  .p-solution__item--reverse .p-solution__item-image { order: 2; }
-  .p-solution__item--reverse .p-solution__item-body { order: 1; }
-  .p-solution__item-image img {
-    height: 520px;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  /* Cases */
-  .p-cases__grid { grid-template-columns: repeat(3, 1fr); }
-  .p-cases__metric-number { font-size: 3.5rem; }
-
-  /* CTA */
-  .p-cta__title { font-size: var(--text-2xl); }
+  /* Specs */
+  .p-specs__grid { gap: var(--space-8); }
+  .p-specs__icon { width: 88px; height: 88px; }
+  .p-specs__icon svg { width: 44px; height: 44px; }
 
   /* Footer */
   .l-footer__inner {
