@@ -459,35 +459,17 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
    5. Project — Top page (p-fv, p-category-nav, p-category, p-card-grid)
    ============================================================ */
 
-/* --- FV(2カラム / 白〜薄青背景 / 月桂冠バッジ + 訴求4ポイント + 浮遊カテゴリチップ) --- */
+/* --- FV(2カラム / 背景画像 + 月桂冠バッジ + 訴求4ポイント + 本イラスト) --- */
 .p-fv {
   position: relative;
   overflow: hidden;
   padding-block: var(--space-12);
-  background: linear-gradient(180deg, #ffffff 0%, #eaf2fb 100%);
+  background-color: #f5f9fd;
+  background-image: url("images/fv-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: var(--color-text);
-}
-.p-fv::before {
-  content: "";
-  position: absolute;
-  width: 700px;
-  height: 700px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(69, 120, 216, 0.07) 0%, transparent 70%);
-  top: -250px;
-  right: -200px;
-  pointer-events: none;
-}
-.p-fv::after {
-  content: "";
-  position: absolute;
-  width: 480px;
-  height: 480px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(42, 170, 221, 0.08) 0%, transparent 70%);
-  bottom: -180px;
-  left: -120px;
-  pointer-events: none;
 }
 .p-fv__inner {
   position: relative;
@@ -617,13 +599,13 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   .p-fv__feature-label { font-size: var(--text-sm); }
 }
 
-/* 右:ビジュアル(本のイラスト + 浮遊チップ) */
+/* 右:ビジュアル(本+チップ込みの完成イラスト1枚) */
 .p-fv__visual {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 0.92;
-  max-width: 640px;
+  max-width: 720px;
   margin-inline: auto;
+  aspect-ratio: 3 / 2;
 }
 .p-fv__visual-book {
   position: absolute;
@@ -637,69 +619,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   height: 100%;
   object-fit: contain;
   display: block;
-}
-
-.p-fv__chips {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-.p-fv__chip {
-  position: absolute;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 14px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow:
-    0 4px 12px rgba(69, 120, 216, 0.15),
-    0 14px 32px rgba(42, 170, 221, 0.12);
-  font-size: var(--text-sm);
-  font-weight: 500;
-  color: var(--color-text);
-  white-space: nowrap;
-  pointer-events: auto;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.p-fv__chip:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 6px 16px rgba(69, 120, 216, 0.22),
-    0 20px 44px rgba(42, 170, 221, 0.16);
-}
-.p-fv__chip-icon {
-  width: 24px;
-  height: 24px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.p-fv__chip-icon svg { width: 22px; height: 22px; }
-
-/* 配置(本の周りに浮かぶ) */
-.p-fv__chip--01 { top: 6%;  left: -2%; }
-.p-fv__chip--02 { top: -2%; left: 38%; }
-.p-fv__chip--03 { top: 6%;  right: -4%; }
-.p-fv__chip--04 { top: 40%; left: -10%; }
-.p-fv__chip--05 { top: 36%; right: -6%; }
-.p-fv__chip--06 { top: 70%; right: 4%; }
-
-@media (max-width: 1023px) {
-  .p-fv__chip {
-    font-size: var(--text-xs);
-    padding: 8px 11px;
-    gap: 6px;
-  }
-  .p-fv__chip-icon { width: 18px; height: 18px; }
-  .p-fv__chip-icon svg { width: 18px; height: 18px; }
-  .p-fv__chip--01 { top: 4%; left: 0; }
-  .p-fv__chip--03 { top: 4%; right: 0; }
-  .p-fv__chip--04 { top: 38%; left: -2%; }
-  .p-fv__chip--05 { top: 36%; right: -2%; }
-  .p-fv__chip--06 { top: 72%; right: 4%; }
 }
 
 @media (max-width: 767px) {
