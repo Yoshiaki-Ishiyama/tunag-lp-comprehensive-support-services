@@ -66,17 +66,101 @@
 <!-- ============================================================
      FV (First View)
      ============================================================ -->
-<section class="l-section l-section--brand p-fv">
+<section class="p-fv">
   <div class="l-container">
     <div class="p-fv__inner">
-      <p class="p-fv__eyebrow">Initiative Index</p>
-      <h1 class="p-fv__title">人事の取り組み大辞典</h1>
-      <p class="p-fv__subtitle">経営・人事・経営企画の「うちでは何ができるだろう?」に、他社の実例で答える事例ライブラリ。お悩みのカテゴリから、すぐに具体策にたどり着けます。</p>
-      <div class="p-fv__meta" role="group" aria-label="辞典の規模">
-        <span class="p-fv__meta-item"><span class="p-fv__meta-num">24</span>件の取り組み</span>
-        <span class="p-fv__meta-item"><span class="p-fv__meta-num">8</span>カテゴリ</span>
-        <span class="p-fv__meta-item">月次更新中</span>
+
+      <!-- Left: Copy -->
+      <div class="p-fv__copy">
+        <div class="p-fv__heading-row">
+          <h1 class="p-fv__title">組織課題解決の<br>取り組み<span class="p-fv__title-accent">大辞典</span></h1>
+          <div class="p-fv__badge" role="group" aria-label="TUNAG上の取り組み 10万件から抜粋">
+            <div class="p-fv__badge-inner">
+              TUNAG上の<br>取り組み<br>
+              <span class="p-fv__badge-num">10</span><span class="p-fv__badge-unit">万件</span><br>
+              から抜粋
+            </div>
+          </div>
+        </div>
+
+        <p class="p-fv__subtitle">
+          経営・人事・経営企画の「うちでは何ができるだろう?」に、他社の実例で答える事例ライブラリ。<br>
+          お悩みのカテゴリから、すぐに具体策にたどり着けます。
+        </p>
+
+        <ul class="p-fv__features" aria-label="このページの特徴">
+          <li class="p-fv__feature">
+            <span class="p-fv__feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            </span>
+            <span class="p-fv__feature-label">課題から探せる</span>
+          </li>
+          <li class="p-fv__feature">
+            <span class="p-fv__feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+            </span>
+            <span class="p-fv__feature-label">豊富な事例を掲載</span>
+          </li>
+          <li class="p-fv__feature">
+            <span class="p-fv__feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2v1.3h6V16.7c0-.8.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg>
+            </span>
+            <span class="p-fv__feature-label">すぐに実践できる</span>
+          </li>
+          <li class="p-fv__feature">
+            <span class="p-fv__feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8"/><path d="M8 10h8"/><path d="M8 14h5"/><path d="M8 18h3"/></svg>
+            </span>
+            <span class="p-fv__feature-label">他社のリアルがわかる</span>
+          </li>
+        </ul>
       </div>
+
+      <!-- Right: Visual -->
+      <div class="p-fv__visual">
+        <div class="p-fv__visual-book">
+          <img src="images/fv-book.svg" alt="取り組み大辞典のイメージ" loading="eager" width="800" height="700">
+        </div>
+        <div class="p-fv__chips" aria-label="代表的なカテゴリ">
+          <a class="p-fv__chip p-fv__chip--01" href="#category-retention">
+            <span class="p-fv__chip-icon" style="color:#2a9d6e" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+            </span>
+            離職率の改善
+          </a>
+          <a class="p-fv__chip p-fv__chip--02" href="#category-field-sync">
+            <span class="p-fv__chip-icon" style="color:#3aa776" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </span>
+            情報共有の促進
+          </a>
+          <a class="p-fv__chip p-fv__chip--03" href="#category-communication">
+            <span class="p-fv__chip-icon" style="color:#e69640" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
+            社内交流の活性化
+          </a>
+          <a class="p-fv__chip p-fv__chip--04" href="#category-onboarding">
+            <span class="p-fv__chip-icon" style="color:#7c5fc4" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/><path d="M21 9l-3 3 3 3"/></svg>
+            </span>
+            新人教育
+          </a>
+          <a class="p-fv__chip p-fv__chip--05" href="#category-recognition">
+            <span class="p-fv__chip-icon" style="color:#e85f7d" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.65A4 4 0 0 1 19 10c0 6.5-7 11-7 11z"/></svg>
+            </span>
+            称賛文化
+          </a>
+          <a class="p-fv__chip p-fv__chip--06" href="#category-evaluation">
+            <span class="p-fv__chip-icon" style="color:#3b9a73" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            心理的安全性の担保
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

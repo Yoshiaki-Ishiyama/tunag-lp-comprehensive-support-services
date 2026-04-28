@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" role="img" aria-label="月桂冠バッジ">
+  <defs>
+    <linearGradient id="leafGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5d76e"/>
+      <stop offset="100%" stop-color="#e6b800"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left laurel -->
+  <g transform="translate(60 140)">
+    <g fill="url(#leafGrad)">
+      <ellipse cx="0" cy="-100" rx="10" ry="22" transform="rotate(-15)"/>
+      <ellipse cx="-10" cy="-70" rx="12" ry="22" transform="rotate(-30 -10 -70)"/>
+      <ellipse cx="-18" cy="-40" rx="13" ry="22" transform="rotate(-50 -18 -40)"/>
+      <ellipse cx="-22" cy="-10" rx="13" ry="22" transform="rotate(-70 -22 -10)"/>
+      <ellipse cx="-22" cy="20" rx="13" ry="22" transform="rotate(-100 -22 20)"/>
+      <ellipse cx="-18" cy="50" rx="13" ry="22" transform="rotate(-120 -18 50)"/>
+      <ellipse cx="-10" cy="80" rx="12" ry="22" transform="rotate(-145 -10 80)"/>
+    </g>
+  </g>
+
+  <!-- Right laurel -->
+  <g transform="translate(260 140)">
+    <g fill="url(#leafGrad)">
+      <ellipse cx="0" cy="-100" rx="10" ry="22" transform="rotate(15)"/>
+      <ellipse cx="10" cy="-70" rx="12" ry="22" transform="rotate(30 10 -70)"/>
+      <ellipse cx="18" cy="-40" rx="13" ry="22" transform="rotate(50 18 -40)"/>
+      <ellipse cx="22" cy="-10" rx="13" ry="22" transform="rotate(70 22 -10)"/>
+      <ellipse cx="22" cy="20" rx="13" ry="22" transform="rotate(100 22 20)"/>
+      <ellipse cx="18" cy="50" rx="13" ry="22" transform="rotate(120 18 50)"/>
+      <ellipse cx="10" cy="80" rx="12" ry="22" transform="rotate(145 10 80)"/>
+    </g>
+  </g>
+</svg>

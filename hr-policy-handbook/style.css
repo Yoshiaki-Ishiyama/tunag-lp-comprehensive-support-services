@@ -459,77 +459,261 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
    5. Project — Top page (p-fv, p-category-nav, p-category, p-card-grid)
    ============================================================ */
 
-/* --- FV --- */
+/* --- FV(2カラム / 白〜薄青背景 / 月桂冠バッジ + 訴求4ポイント + 浮遊カテゴリチップ) --- */
 .p-fv {
   position: relative;
   overflow: hidden;
-  padding-block: var(--space-12) var(--space-12);
+  padding-block: var(--space-12);
+  background: linear-gradient(180deg, #ffffff 0%, #eaf2fb 100%);
+  color: var(--color-text);
 }
 .p-fv::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 80% 30%, rgba(255, 255, 255, 0.18) 0%, transparent 60%);
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(69, 120, 216, 0.07) 0%, transparent 70%);
+  top: -250px;
+  right: -200px;
+  pointer-events: none;
+}
+.p-fv::after {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(42, 170, 221, 0.08) 0%, transparent 70%);
+  bottom: -180px;
+  left: -120px;
   pointer-events: none;
 }
 .p-fv__inner {
   position: relative;
-  text-align: center;
-  max-width: 880px;
-  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  align-items: center;
+  z-index: 1;
 }
-.p-fv__eyebrow {
-  display: inline-block;
-  font-family: var(--font-en);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-text-on-brand-mute);
-  margin: 0 0 var(--space-3);
+@media (min-width: 1024px) {
+  .p-fv__inner {
+    grid-template-columns: 1.05fr 1fr;
+    gap: var(--space-8);
+  }
+}
+
+/* 左:コピー */
+.p-fv__copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.p-fv__heading-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
 }
 .p-fv__title {
-  font-size: clamp(2.25rem, 6vw, var(--text-hero));
+  font-size: clamp(1.875rem, 5vw, 3.25rem);
   font-weight: 900;
-  line-height: 1.3;
-  color: var(--color-text-on-brand);
+  line-height: 1.32;
+  color: var(--color-text);
   font-kerning: normal;
   font-feature-settings: "palt" 1;
   letter-spacing: 0.02em;
-  text-shadow: 0 4px 18px rgba(10, 36, 86, 0.15);
-  margin: 0 0 var(--space-4);
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: 0;
 }
-.p-fv__subtitle {
-  font-size: var(--text-lg);
-  line-height: 1.9;
-  color: var(--color-text-on-brand);
-  opacity: 0.92;
-  margin: 0 auto;
-  max-width: 720px;
-}
-.p-fv__meta {
+.p-fv__title-accent { color: var(--color-primary); }
+
+/* 月桂冠バッジ */
+.p-fv__badge {
+  position: relative;
   display: inline-flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: var(--space-3) var(--space-4);
-  margin-top: var(--space-6);
-  padding: var(--space-2) var(--space-4);
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-round);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  width: 170px;
+  min-height: 140px;
+  padding: 0 26px;
+  background-image: url("images/fv-laurel.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-align: center;
+  flex-shrink: 0;
 }
-.p-fv__meta-item {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 6px;
-  color: var(--color-text-on-brand);
+.p-fv__badge-inner {
   font-size: var(--text-sm);
-}
-.p-fv__meta-num {
-  font-family: var(--font-en);
-  font-size: var(--text-xl);
   font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+}
+.p-fv__badge-num {
+  font-family: var(--font-en);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
   letter-spacing: 0.01em;
+  line-height: 1;
+  vertical-align: -0.06em;
+}
+.p-fv__badge-unit {
+  font-family: var(--font-jp);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.p-fv__subtitle {
+  font-size: var(--text-base);
+  line-height: 1.95;
+  color: var(--color-text);
+  margin: 0;
+  max-width: 600px;
+}
+
+/* 訴求4ポイント */
+.p-fv__features {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+  max-width: 540px;
+}
+.p-fv__feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+.p-fv__feature-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-bg-cool);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+.p-fv__feature-icon svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+.p-fv__feature-label {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .p-fv__feature-label { font-size: var(--text-sm); }
+}
+
+/* 右:ビジュアル(本のイラスト + 浮遊チップ) */
+.p-fv__visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.92;
+  max-width: 640px;
+  margin-inline: auto;
+}
+.p-fv__visual-book {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p-fv__visual-book img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.p-fv__chips {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.p-fv__chip {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow:
+    0 4px 12px rgba(69, 120, 216, 0.15),
+    0 14px 32px rgba(42, 170, 221, 0.12);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  pointer-events: auto;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.p-fv__chip:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 16px rgba(69, 120, 216, 0.22),
+    0 20px 44px rgba(42, 170, 221, 0.16);
+}
+.p-fv__chip-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.p-fv__chip-icon svg { width: 22px; height: 22px; }
+
+/* 配置(本の周りに浮かぶ) */
+.p-fv__chip--01 { top: 6%;  left: -2%; }
+.p-fv__chip--02 { top: -2%; left: 38%; }
+.p-fv__chip--03 { top: 6%;  right: -4%; }
+.p-fv__chip--04 { top: 40%; left: -10%; }
+.p-fv__chip--05 { top: 36%; right: -6%; }
+.p-fv__chip--06 { top: 70%; right: 4%; }
+
+@media (max-width: 1023px) {
+  .p-fv__chip {
+    font-size: var(--text-xs);
+    padding: 8px 11px;
+    gap: 6px;
+  }
+  .p-fv__chip-icon { width: 18px; height: 18px; }
+  .p-fv__chip-icon svg { width: 18px; height: 18px; }
+  .p-fv__chip--01 { top: 4%; left: 0; }
+  .p-fv__chip--03 { top: 4%; right: 0; }
+  .p-fv__chip--04 { top: 38%; left: -2%; }
+  .p-fv__chip--05 { top: 36%; right: -2%; }
+  .p-fv__chip--06 { top: 72%; right: 4%; }
+}
+
+@media (max-width: 767px) {
+  .p-fv__heading-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .p-fv__badge { width: 150px; min-height: 120px; }
+  .p-fv__badge-num { font-size: 1.625rem; }
+  .p-fv__features { gap: 6px; }
+  .p-fv__feature-icon { width: 48px; height: 48px; }
+  .p-fv__feature-icon svg { width: 20px; height: 20px; }
+  .p-fv__feature-label { font-size: 11px; }
+  .p-fv__visual { aspect-ratio: 1 / 1; }
 }
 
 /* --- Category Nav (chip list) --- */

@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700" role="img" aria-label="開いた取り組み大辞典の本のイラスト">
+  <defs>
+    <linearGradient id="bookCover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4578d8"/>
+      <stop offset="100%" stop-color="#2a5fbf"/>
+    </linearGradient>
+    <linearGradient id="bookSpine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1f4ea8"/>
+      <stop offset="100%" stop-color="#3a6cce"/>
+    </linearGradient>
+    <linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f8fc"/>
+    </linearGradient>
+    <linearGradient id="thumb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dbe8f8"/>
+      <stop offset="100%" stop-color="#bcd1ee"/>
+    </linearGradient>
+    <filter id="bookShadow" x="-10%" y="-5%" width="120%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="14"/>
+      <feOffset dx="0" dy="20" result="offsetblur"/>
+      <feFlood flood-color="#0a2456" flood-opacity="0.18"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="pageShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="3" result="offsetblur"/>
+      <feFlood flood-color="#18408a" flood-opacity="0.12"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Floor shadow -->
+  <ellipse cx="400" cy="640" rx="280" ry="22" fill="#0a2456" opacity="0.08"/>
+
+  <!-- Book group -->
+  <g filter="url(#bookShadow)">
+    <!-- Back cover (left, slightly tilted) -->
+    <path d="M 70 230 L 400 200 L 400 600 L 70 580 Z" fill="url(#bookCover)"/>
+    <!-- Back cover (right) -->
+    <path d="M 730 230 L 400 200 L 400 600 L 730 580 Z" fill="url(#bookCover)"/>
+    <!-- Spine -->
+    <path d="M 395 200 L 405 200 L 405 600 L 395 600 Z" fill="url(#bookSpine)"/>
+
+    <!-- Page stack edges -->
+    <path d="M 80 240 L 400 215 L 400 230 L 80 252 Z" fill="#dde6f3"/>
+    <path d="M 720 240 L 400 215 L 400 230 L 720 252 Z" fill="#dde6f3"/>
+
+    <!-- Left page -->
+    <path d="M 100 250 L 395 230 L 395 580 L 100 560 Z" fill="url(#page)" filter="url(#pageShadow)"/>
+    <!-- Right page -->
+    <path d="M 700 250 L 405 230 L 405 580 L 700 560 Z" fill="url(#page)" filter="url(#pageShadow)"/>
+  </g>
+
+  <!-- Left page content -->
+  <g transform="translate(140 280)">
+    <!-- thumbnail block -->
+    <rect x="0" y="0" width="80" height="60" rx="6" fill="url(#thumb)"/>
+    <circle cx="40" cy="32" r="14" fill="#9ab9e3" opacity="0.7"/>
+    <!-- text lines -->
+    <rect x="100" y="10" width="140" height="6" rx="3" fill="#1f4d96" opacity="0.8"/>
+    <rect x="100" y="24" width="100" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+    <rect x="100" y="36" width="120" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+    <rect x="100" y="48" width="80" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+
+    <!-- second block -->
+    <rect x="0" y="90" width="80" height="60" rx="6" fill="url(#thumb)"/>
+    <rect x="14" y="108" width="52" height="6" rx="3" fill="#9ab9e3" opacity="0.7"/>
+    <rect x="14" y="122" width="40" height="6" rx="3" fill="#9ab9e3" opacity="0.7"/>
+    <rect x="100" y="100" width="140" height="6" rx="3" fill="#1f4d96" opacity="0.8"/>
+    <rect x="100" y="114" width="100" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+    <rect x="100" y="126" width="120" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+    <rect x="100" y="138" width="80" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+
+    <!-- third block -->
+    <rect x="0" y="180" width="80" height="60" rx="6" fill="url(#thumb)"/>
+    <rect x="100" y="190" width="140" height="6" rx="3" fill="#1f4d96" opacity="0.8"/>
+    <rect x="100" y="204" width="100" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+    <rect x="100" y="216" width="120" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+    <rect x="100" y="228" width="60" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+  </g>
+
+  <!-- Right page content -->
+  <g transform="translate(440 280)">
+    <rect x="0" y="0" width="80" height="60" rx="6" fill="url(#thumb)"/>
+    <circle cx="40" cy="32" r="14" fill="#9ab9e3" opacity="0.7"/>
+    <rect x="100" y="10" width="140" height="6" rx="3" fill="#1f4d96" opacity="0.8"/>
+    <rect x="100" y="24" width="100" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+    <rect x="100" y="36" width="120" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+    <rect x="100" y="48" width="80" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+
+    <rect x="0" y="90" width="80" height="60" rx="6" fill="url(#thumb)"/>
+    <rect x="100" y="100" width="140" height="6" rx="3" fill="#1f4d96" opacity="0.8"/>
+    <rect x="100" y="114" width="100" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+    <rect x="100" y="126" width="120" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+    <rect x="100" y="138" width="80" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+
+    <rect x="0" y="180" width="80" height="60" rx="6" fill="url(#thumb)"/>
+    <circle cx="40" cy="210" r="12" fill="#9ab9e3" opacity="0.7"/>
+    <rect x="100" y="190" width="140" height="6" rx="3" fill="#1f4d96" opacity="0.8"/>
+    <rect x="100" y="204" width="100" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+    <rect x="100" y="216" width="120" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+    <rect x="100" y="228" width="60" height="5" rx="2.5" fill="#0f1b3d" opacity="0.35"/>
+  </g>
+
+  <!-- Bookmark ribbon -->
+  <path d="M 405 200 L 405 670 L 425 650 L 445 670 L 445 200 Z" fill="#2aaadd" opacity="0.85"/>
+</svg>
